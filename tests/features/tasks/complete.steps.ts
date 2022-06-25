@@ -1,5 +1,5 @@
 import { StepDefinitions } from 'jest-cucumber'
-import { CompleteTask } from '@src/tasks/commands'
+import { MarkCompletedTask } from '@src/tasks/commands'
 import { context } from '@tests/features/context'
 import { titled, completed } from '@src/tasks/queries/task'
 
@@ -11,7 +11,7 @@ export const completeSteps: StepDefinitions = ({ when, then }) => {
 
   when(/^User completes the task '(.*)'$/, (taskTitle: string) => {
     const task = context.tasks.find(titled(taskTitle))
-    context.processor.execute(new CompleteTask(task[0]))
+    context.processor.execute(new MarkCompletedTask(task[0]))
   })
 
   /* -------------------------------------------------------------------------- */

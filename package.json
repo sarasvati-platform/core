@@ -1,16 +1,19 @@
 {
   "name": "@sarasvati-platform/core",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "exports": {
-    ".": {
-      "import": "./dist/index.js"
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "require": "./dist/*/index.js",
+      "import": "./dist/*/index.js"
     }
+  },
+  "typesVersions": {
+    ">=3.2": { "*": ["./dist/*/index.d.ts"] }
   },
   "files": [
     "/dist"
   ],
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Core library for the Sarasvati Platform",
   "repository": {
     "type": "git",

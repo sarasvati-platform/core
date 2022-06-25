@@ -1,0 +1,52 @@
+{
+  "name": "@sarasvati-platform/core",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "/dist"
+  ],
+  "version": "0.2.7",
+  "description": "Core library for the Sarasvati Platform",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarasvati-platform/core.git"
+  },
+  "author": "Advaita Krishna das",
+  "bugs": {
+    "url": "https://github.com/sarasvati-platform/core/issues"
+  },
+  "homepage": "https://github.com/sarasvati-platform/core#readme",
+  "devDependencies": {
+    "@stryker-mutator/core": "^6.0.2",
+    "@stryker-mutator/jest-runner": "^6.0.2",
+    "@stryker-mutator/typescript-checker": "^6.0.2",
+    "@types/jest": "^28.1.3",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "jest": "^28.1.1",
+    "jest-cucumber": "^3.0.1",
+    "resolve-tspaths": "^0.6.0",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4",
+    "@vue/eslint-config-typescript": "^11.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "mtest": "stryker run",
+    "lint": "eslint . --ext .ts",
+    "build": "tsc && resolve-tspaths"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
